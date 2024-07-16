@@ -9,6 +9,12 @@ function getToDoData() {
         });
 }
 
+//TODO markComplete(todo){}
+function markComplete(todoObj){
+    
+}
+
+//save todo data
 function saveToDoData(updatedTodos) {
     return writeFile('./db/todos.json', JSON.stringify(updatedTodos));
 }
@@ -38,7 +44,6 @@ function addTodo() {
                     text: addTodoAnswerObj.todoText,
                     completed: false
                 }
-
                 todosArray.push(todoObj);
                 return saveToDoData(todosArray)
                     .then(() => {
